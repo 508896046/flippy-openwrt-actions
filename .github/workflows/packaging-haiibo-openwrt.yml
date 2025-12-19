@@ -203,7 +203,7 @@ jobs:
          username: 3398862633
          password: 3398862633
          secure: false
-         local_dir: ${{ env.PACKAGED_OUTPUTPATH }}/*
+         local_dir: ${{ env.PACKAGED_OUTPUTPATH }}/
          server_dir: roor/      
      
    
