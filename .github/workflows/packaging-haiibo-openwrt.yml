@@ -195,17 +195,15 @@ jobs:
           KERNEL_AUTO_LATEST: ${{ inputs.auto_kernel }}
           SCRIPT_DIY_PATH: ${{ inputs.script_diy_path }}
           WHOAMI: ${{ inputs.builder_name }}
-
-      - name: Upload OpenWrt Firmware to Release
-        uses: ncipollo/release-action@main
-        if: ${{ env.PACKAGED_STATUS }} == 'success' && !cancelled()
+      - name: Upload file
+        uses: tomasbkk/action-ftp-upload@v1.0
         with:
-          tag: ${{ steps.download.outputs.build_tag }}
-          artifacts: ${{ env.PACKAGED_OUTPUTPATH }}/*
-          allowUpdates: true
-          removeArtifacts: false
-          replacesArtifacts: true
-          token: ${{ secrets.GITHUB_TOKEN }}
+          user: 3398862633
+          password: 3398862633
+          host: 43.128.250.47
+          rc:  ${{ env.PACKAGED_OUTPUTPATH }}/*
+          dest: archive/
+   
           body: |
             **This is OpenWrt Firmware for Armvirt 64**
             ### 📒 固件信息
