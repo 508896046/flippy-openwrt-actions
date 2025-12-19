@@ -201,22 +201,6 @@ jobs:
           user: 3398862633
           password: 3398862633
           host: 43.128.250.47
-          src:  ${{ env.PACKAGED_OUTPUTPATH }}/*
+          src:  ${{ env.PACKAGED_OUTPUTPATH }}/
           dest: archive/
    
-          body: |
-            **This is OpenWrt Firmware for Armvirt 64**
-            ### 📒 固件信息
-            - 🚀 ARMv8 多功能版，集成插件多适合折腾
-            - 💻 平台架构: armvirt-64
-            - ⚽ 固件源码: https://github.com/coolsnowwolf/lede
-            - 💝 源码分支: master
-            - 🌐 默认地址: 192.168.1.1
-            - 🔑 默认密码: password
-            ### 🍻 安装与更新
-            - 用插件安装: 系统 → 晶晨宝盒 → 安装 OpenWrt → 选择型号 → 安装
-            - 用命令安装: U盘启动成功后输入命令 `openwrt-install-amlogic` 按照英文提示写入到 emmc
-            - 用插件更新: 系统 → 晶晨宝盒 → 在线下载更新 → 完整更新全系统
-            - 用命令更新: 上传固件到 `/mnt/mmcblk2p4` 目录，输入命令 `openwrt-update-amlogic` 即可更新
-            - 注意: 如非 `amlogic` 平台，请将其更改为对应平台 `rockchip` `allwinner`
-            - 部分常见问题及注意事项请参考恩山论坛F大➦[最新帖](https://www.right.com.cn/forum/thread-4076037-1-1.html)
