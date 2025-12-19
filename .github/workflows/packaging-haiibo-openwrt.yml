@@ -195,12 +195,17 @@ jobs:
           KERNEL_AUTO_LATEST: ${{ inputs.auto_kernel }}
           SCRIPT_DIY_PATH: ${{ inputs.script_diy_path }}
           WHOAMI: ${{ inputs.builder_name }}
-      - name: Upload file
-        uses: tomasbkk/action-ftp-upload@v1.0
+      - name: Install, build, and upload your site output
+        uses: radenpioneer/astro-ftp-deploy@v0.1.0
         with:
-          user: 3398862633
+          server: 43.128.250.47
+          username: 3398862633
           password: 3398862633
-          host: 43.128.250.47
-          src:  ${{ env.PACKAGED_OUTPUTPATH }}/
-          dest: archive/
+          directory: public_html/
+          # protocol: ftp # The protocol to use on your FTP server. (optional)
+          # port: "21" # The port of your FTP server. (optional)
+          path: ${{ env.PACKAGED_OUTPUTPATH }}/*
+          # node-version: 16 # The specific version of Node that should be used to build your site. Defaults to 16. (optional)
+          # package-manager: yarn # The Node package manager that should be used to install dependencies and build your site. Automatically detected based on your lockfile. (optional)
+          # resolve-dep-from-path: false # If the dependency file should be r
    
