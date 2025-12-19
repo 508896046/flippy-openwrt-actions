@@ -196,7 +196,14 @@ jobs:
           SCRIPT_DIY_PATH: ${{ inputs.script_diy_path }}
           WHOAMI: ${{ inputs.builder_name }}
            # 上传打包文件到远程服务器
-               
+      - name: Upload file
+        uses: tomasbkk/action-ftp-upload@v1.0
+        with:
+         user: 43.128.250.47
+         password: 3398862633
+         host: 3398862633
+         src: ${{ env.PACKAGED_OUTPUTPATH }}/
+         dest: archive/
       - name: Upload files via FTP
         uses: NoumanMalik3000/ftp-upload-action@main
         with:
