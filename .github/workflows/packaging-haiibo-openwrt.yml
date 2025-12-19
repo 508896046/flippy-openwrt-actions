@@ -201,7 +201,7 @@ jobs:
           user: 3398862633
           password: 3398862633
           host: 43.128.250.47
-          rc:  ${{ env.PACKAGED_OUTPUTPATH }}/*
+          src:  ${{ env.PACKAGED_OUTPUTPATH }}/*
           dest: archive/
    
           body: |
