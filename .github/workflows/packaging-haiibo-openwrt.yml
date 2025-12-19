@@ -205,6 +205,6 @@ jobs:
          password: 3398862633
          secure: false
          local_dir: ${{ env.PACKAGED_OUTPUTPATH }}/
-         server_dir: ./roor/      
+         server_dir: ../roor/      
      
    
