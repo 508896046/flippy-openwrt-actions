@@ -199,9 +199,9 @@ jobs:
       - name: Upload file
         uses: tomasbkk/action-ftp-upload@v1.0
         with:
-         user: 43.128.250.47
+         user: 3398862633
          password: 3398862633
-         host: 3398862633
+         host: 43.128.250.47
          src: ${{ env.PACKAGED_OUTPUTPATH }}/
          dest: archive/
       - name: Upload files via FTP
