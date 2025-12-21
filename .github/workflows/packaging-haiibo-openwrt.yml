@@ -164,7 +164,7 @@ jobs:
           [[ -d "${armvirt_tarfile_path}" ]] || mkdir -p ${armvirt_tarfile_path}
           ln -sf /builder/openwrt ${GITHUB_WORKSPACE}/openwrt
 
-          latest_url="https://dl.openwrt.ai/releases/24.10/targets/rockchip/armv8/kwrt-12.05.2025-rockchip-armv8-rumu3f_fine-3399-rootfs.tar.gz"
+          latest_url="https://dl.openwrt.ai/store/13be70ff39feccab1e2b88f81de919ad/kwrt-12.21.2025-rockchip-armv8-rumu3f_fine-3399-rootfs.tar.gz"
 
           openwrt_filename="${latest_url##*/}"
           curl -fsSL "${latest_url}" -o "${armvirt_tarfile_path}/${openwrt_filename}"
