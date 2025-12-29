@@ -18,7 +18,7 @@ on:
         options:
           - all
           - s922x_s905x3_s905x2_s912_s905d_s905
-          - ak88
+          - sw799
           - beikeyun
           - cm3
           - e25
