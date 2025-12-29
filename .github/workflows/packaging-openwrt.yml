@@ -69,7 +69,7 @@ on:
           - 5.15.y
           - 6.1.y
           - 6.6.y
-          - 6.1.y_6.6.y
+          - 6.12.y
           - 5.15.y_5.10.y
       kernel_repo:
         description: "Set the kernel repository"
@@ -170,7 +170,7 @@ jobs:
           [[ -d "${armvirt_tarfile_path}" ]] || mkdir -p ${armvirt_tarfile_path}
           ln -sf /builder/openwrt ${GITHUB_WORKSPACE}/openwrt
 
-          latest_url="https://dl.openwrt.ai/releases/25.12/targets/rockchip/armv8/kwrt-12.28.2025-rockchip-armv8-rumu3f_fine-3399-rootfs.tar.gz"
+          latest_url="https://dl.openwrt.ai/store/b8a6a2776f9d2d59a09730e2693c119b/kwrt-12.29.2025-rockchip-armv8-rumu3f_fine-3399-rootfs.tar.gz"
 
           openwrt_filename="${latest_url##*/}"
           curl -fsSL "${latest_url}" -o "${armvirt_tarfile_path}/${openwrt_filename}"
